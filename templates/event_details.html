@@ -1,0 +1,120 @@
+<!doctype html>
+{% extends 'base.html'%}
+{%load static%}
+<html lang="en">
+
+  <body>
+ {% block content%}
+    <!-- Body Wrap - Start -->
+    <div class="page_wrapper">
+
+      <!-- Back To Top - Start -->
+      <div class="backtotop">
+        <a href="#" class="scroll">
+          <i class="far fa-arrow-up"></i>
+          <i class="far fa-arrow-up"></i>
+        </a>
+      </div>
+
+
+      <!-- Main Body - Start
+      ================================================== -->
+      <main class="page_content">
+
+        <!-- Page Banner - Start
+        ================================================== -->
+        <section class="page_banner decoration_wrap">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col col-lg-7">
+                <h1 class="page_heading">
+                  {{lessondetails_list.name}}
+                </h1>
+                <ul class="post_meta unordered_list_center">
+                  <li><i class="far fa-calendar-alt me-1"></i>{{lessondetails_list.created}}</li>
+                  <li><a href="#!"><i class="fas fa-map-marker-alt me-1"></i> Khorezm</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="deco_item deco_img_1" data-parallax='{"y" : -200, "smoothness": 6}'>
+            <img src="{% static 'assets/images/shapes/line_shape_1.png'%}" alt="Line Shape Image">
+          </div>
+          <div class="deco_item deco_img_2" data-parallax='{"y" : 200, "smoothness": 6}'>
+            <img src="{% static 'assets/images/shapes/dot_shape_2.png'%}" alt="Line Shape Image">
+          </div>
+        </section>
+        <!-- Page Banner - End
+        ================================================== -->
+
+        <!-- Details Section - Start
+        ================================================== -->
+        <section class="details_section event_details_section section_space_lg pt-0">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col col-lg-8">
+                <div class="details_content">
+                  {{lessondetails_list.text | safe }}
+
+
+                  <hr>
+                  <div class="social_activity_links">
+                    <div class="item_tags">
+                      <span class="wrap_title">Tags:</span>
+                      <ul class="tags_list unordered_list">
+                        <li><a href="#!">Learning</a></li>
+                        <li><a href="#!">Course</a></li>
+                        <li><a href="#!">Online</a></li>
+                      </ul>
+                    </div>
+                    <div class="item_social_share">
+                      <span class="wrap_title">Share:</span>
+                      <ul class="social_icon unordered_list">
+                        <li>
+                          <a class="bg_facebook" href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="bg_twitter" href="https://twitter.com/">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="bg_linkedin" href="https://www.linkedin.com/">
+                            <i class="fab fa-linkedin-in"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="bg_youtube" href="https://www.youtube.com/">
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-youtube"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Details Section - End
+        ================================================== -->
+
+
+      </main>
+      <!-- Main Body - End
+      ================================================== -->
+
+
+    </div>
+ {% endblock content%}
+  </body>
+
+</html>
